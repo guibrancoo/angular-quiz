@@ -1,0 +1,11 @@
+{
+  "targets": {
+    "angular-quizz": {
+      "hosting": {
+        "angular-quizz": [
+          "angular-quizz"
+        ]
+      }
+    }
+  }
+}

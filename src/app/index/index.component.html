@@ -1,2 +1,33 @@
-<h1>Index</h1>
-<p>index works!</p>
+<section class="container mt-5">
+    <h1>Start Quizz</h1>
+    <hr>
+    <p>If you want to start a quiz! Press the button bellow this text.</p>
+    <a class="button" [routerLink]="['/quiz']">Go to Quiz!</a>
+    <h1>Desenvolvedores</h1>
+    <hr>
+    <div class="devs-wrapper">
+      <div class="dev-card border-gradient gradient-blue-to-purple px-3 py-5">
+        <div class="dev-card-brand">
+          <img src="assets/images/guilherme-herter-perfil.png" alt="Perfil do Guilherme Herter">
+        </div>
+        <div class="dev-card-content">
+          <div class="dev-card-info">
+            <h4>Guilherme Herter</h4>
+            <p>Sou um desenvolvedor, com enfoque em programação funcional, primariamente em Clojure,  e aspirante a Cientista de Dados</p>
+          </div>
+        </div>
+      </div>
+      
+      <div class="dev-card border-gradient gradient-blue-to-purple px-3 py-5 mt-4">
+        <div class="dev-card-brand">
+          <img src="assets/images/guilherme-branco-perfil.png" alt="Perfil do Guilherme Branco">
+        </div>
+        <div class="dev-card-content">
+          <div class="dev-card-info">
+            <h4>Guilherme Branco</h4>
+            <p>Sou um UX/UI designer, com intuito de tornar a experiência de uso de qualquer usuário a melhor e mais simples possível</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>

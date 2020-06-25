@@ -9,12 +9,14 @@ import { AngularFireDatabaseModule } from '@angular/fire/database'
 import { environment } from 'src/environments/environment';
 import { IndexComponent } from './index/index.component';
 import { LoginComponent } from './login/login.component';
+import { QuizComponent } from './quiz/quiz.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     IndexComponent,
-    LoginComponent
+    LoginComponent,
+    QuizComponent
   ],
   imports: [
     BrowserModule,

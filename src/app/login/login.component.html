@@ -1,3 +1,7 @@
-<h1>Bem Vindo(a)!</h1>
-Usuário: <input type="text">
-<button>Entrar</button>
+Usuário: <input #u type="text">
+<div><button (click)="this.add(u.value)">Entrar</button></div>
+
+<div *ngFor="let username of list | async">
+    <h1>Bem Vindo(a), {{username.user}}!</h1>
+    <div><button (click)="this.delete(username.key)">Deslogar de {{username.user}}</button></div>
+</div>

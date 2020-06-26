@@ -1,1 +1,44 @@
-<p>quiz works!</p>
+<h2>Quiz Soccer Teams and Players</h2>
+<hr/>
+<div>Questão:</div>
+<div>
+    <select #q>
+        <option value="" selected disabled hidden>Escolha uma pergunta...</option>
+        <option value="1">1. Time do Neymar</option>
+        <option value="2">2. Time do Messi</option>
+        <option value="3">3. Time do CR7</option>
+        <option value="4">4. Time do Pelé</option>
+      </select>
+</div>
+<div>Alternativas</div>
+<div><input #a1 type=radio>A. Barcelona</div>
+<div><input #a2 type=radio>B. Liverpool</div>
+<div><input #a3 type=radio>C. Juventus</div>
+<div><input #a4 type=radio>D. Paris Saint-Germann</div>
+<div>Resposta:</div>
+<div><input #a type=text></div>
+<div><button (click)="this.add(q.value, a.value, a1.value, a2.value, a3.value, a4.value)">Adicionar</button></div>
+<hr/>
+<table class="table">
+  <tr>
+    <th>Chave</th>
+    <th>Questão</th>
+    <th>Resposta</th>
+    <th>Alternativa 1</th>
+    <th>Alternativa 2</th>
+    <th>Alternativa 3</th>
+    <th>Alternativa 4</th>
+  </tr>
+  <tr *ngFor="let question of list | async">
+    <td>
+      <!-- {{question.key}} -->
+      <div><button (click)="this.delete(question.key)">Remover</button></div>
+    </td>
+    <td>{{question.question}}</td>
+    <td>{{question.answer}}</td>
+    <td>{{question.alternative1}}</td>
+    <td>{{question.alternative2}}</td>
+    <td>{{question.alternative3}}</td>
+    <td>{{question.alternative4}}</td>
+  </tr>
+</table>
